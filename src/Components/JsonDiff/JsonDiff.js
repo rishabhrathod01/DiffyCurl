@@ -2,7 +2,8 @@ import React from 'react'
 import { isObject } from 'lodash'
 import DiffView from '../DiffView/DiffView'
 import { useViewport } from '../../hooks/UseViewport'
-import { reArrangeObj } from '../../utils/helpers'
+import { reArrangeObj, parseJsonDate } from '../../utils/helpers'
+import { FONTS } from '../../utils/constants'
 
 const JsonDiff = (props) => {
   const { firstJson, secondJson, level } = props
@@ -17,15 +18,37 @@ const JsonDiff = (props) => {
         const firstJsonSection = firstJson[section] || defaultValue
         const secondJsonSection = secondJson[section] || defaultValue
         if (isObject(firstJsonSection) && isObject(secondJsonSection)) {
+          const orderedFirstObj = reArrangeObj(firstJsonSection)
+          const orderedSecondObj = reArrangeObj(secondJsonSection)
+
+          if (section === 'data') {
+            const actualFirstData = parseJsonDate(orderedFirstObj)
+            const actualSecondData = parseJsonDate(orderedSecondObj)
+            return (
+              <div style={{ display: 'flex', flexDirection: 'column', marginTop: level === 0 ? 20 : 10 }} key={section}>
+                {level > 0 ? (
+                  <span style={{ fontWeight: '500', fontSize: 14, padding: 4, fontFamily: FONTS.MONOSPACE }}>
+                    {section.slice(0, 80)}
+                  </span>
+                ) : null}
+                <DiffView
+                  level={level}
+                  maxWidth={windowWidth}
+                  title={level === 0 ? section : null}
+                  newJson={actualFirstData}
+                  oldJson={actualSecondData}
+                />
+              </div>
+            )
+          }
           return (
-            <div
-              key={`${section}-${level}`}
-              style={{ display: 'flex', flexDirection: 'column', marginTop: 20, textTransform: 'capitalize' }}
-            >
-              <span style={{ fontWeight: '700', fontSize: 16, padding: 10 }}>{section.slice(0, 80)}</span>
+            <div key={`${section}-${level}`} style={{ display: 'flex', flexDirection: 'column', marginTop: 20 }}>
+              <span style={{ fontWeight: '700', fontSize: 16, padding: 10, fontFamily: FONTS.MONOSPACE }}>
+                {section.slice(0, 80)}
+              </span>
               <JsonDiff
-                firstJson={reArrangeObj(firstJsonSection)}
-                secondJson={reArrangeObj(secondJsonSection)}
+                firstJson={reArrangeObj(orderedFirstObj)}
+                secondJson={reArrangeObj(orderedSecondObj)}
                 level={level + 1}
               />
             </div>
@@ -39,7 +62,9 @@ const JsonDiff = (props) => {
         return (
           <div style={{ display: 'flex', flexDirection: 'column', marginTop: level === 0 ? 20 : 10 }} key={section}>
             {level > 0 ? (
-              <span style={{ fontWeight: '500', fontSize: 12, padding: 4 }}>{section.slice(0, 80)}</span>
+              <span style={{ fontWeight: '500', fontSize: 12, padding: 4, fontFamily: FONTS.MONOSPACE }}>
+                {section.slice(0, 80)}
+              </span>
             ) : null}
             <DiffView
               level={level}

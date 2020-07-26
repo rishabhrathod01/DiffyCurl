@@ -74,10 +74,4 @@ export const curl1 = !isDevelopment
 
 export const curl2 = !isDevelopment
   ? ''
-  : `curl --location --request POST 'https://btfast.streak.tech/backtest_service' \
---header 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.10.7 Chrome/78.0.3904.130 Electron/7.1.9 Safari/537.36' \
---header 'Origin: file://' \
---header '__RN_DEBUGGER_SET_HEADER_REQUEST_referer: https://api.streak.tech/dashboard_metrics/' \
---header 'cookie1: csrftoken=jFViPWnSOcVADr0QV9lTuw9jetZG09eLrHcxLWSuycyE4VaUxHkvvV3dr4FzGsE7;sessionid=rgoivzcrhc30whnhw4xo9mhsso4fpf6o' \
---header 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
---data-raw ''`
+  : `curl -i -H "Accept: application/json" -X POST -d "{status:MIA}" http://personsreport.com/status/person123`

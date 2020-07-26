@@ -80,7 +80,7 @@ class DiffView extends PureComponent {
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {stringArray.map((stringarray, i) => {
                   return (
-                    <span key={`${i}-as`} style={{ flex: 1, marginRight: 0 }}>
+                    <span key={`${i}-as`}>
                       {stringarray}
                       <br />
                     </span>

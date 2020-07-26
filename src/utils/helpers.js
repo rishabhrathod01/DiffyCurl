@@ -1,3 +1,5 @@
+import { isObject } from 'lodash'
+
 export const reArrangeObj = (unordered = {}) => {
   const ordered = {}
   const keys = Object.keys(unordered)
@@ -14,12 +16,22 @@ export const reArrangeObj = (unordered = {}) => {
   return ordered
 }
 
-// export const isJSON = (str) => {
-//   try {
-//     const obj = JSON.parse(str)
-//     if (obj && typeof obj === 'object' && obj !== null) {
-//       return true
-//     }
-//   } catch (err) {}
-//   return false
-// }
+export const jsonParse = (str) => {
+  try {
+    const obj = JSON.parse(str)
+    if (obj && typeof obj === 'object' && obj !== null) {
+      return obj
+    }
+  } catch (err) {}
+  return str
+}
+
+export const parseJsonDate = (str) => {
+  const parsedData = jsonParse(str)
+  if (isObject(parsedData)) {
+    const keys = Object.keys(parsedData)
+    const stringifiedData = keys[0]
+    return jsonParse(stringifiedData)
+  }
+  return str
+}
