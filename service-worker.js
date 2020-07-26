@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DiffyCurl/precache-manifest.1c16fecee7199f42a60eb5ff45e04cc2.js"
+  "/DiffyCurl/precache-manifest.fbf5419e68561ef1b4a7f5422431d4aa.js"
 );
 
 self.addEventListener('message', (event) => {
