@@ -62,7 +62,6 @@ class DiffView extends PureComponent {
     const newValue = JSON.stringify(oldJson, null, 4)
     // const decodedoOldValue = JSON.stringify(decodeURIComponent(oldValue), null, 4)
     // const decodedNewValue = JSON.stringify(decodeURIComponent(newValue), null, 4)
-    // console.log(oldValue, newValue)
     return (
       <ReactDiffViewer
         leftTitle={props.title}
@@ -75,7 +74,6 @@ class DiffView extends PureComponent {
         renderContent={(str) => {
           const strLength = (str && str.length) || 0
           const stringArray = []
-          if (str && str.includes('autho')) console.log(str.slice(0, 10), str.length, props.maxWidth)
           if (strLength > maxStringSize) {
             for (let i = 0; i < strLength; i += maxStringSize) {
               stringArray.push(str.substring(i, i + maxStringSize))
