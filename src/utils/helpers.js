@@ -20,7 +20,7 @@ export const jsonParse = (str) => {
   try {
     const obj = JSON.parse(str)
     if (obj && typeof obj === 'object' && obj !== null) {
-      return obj
+      return reArrangeObj(obj)
     }
   } catch (err) {}
   return str
@@ -30,8 +30,11 @@ export const parseJsonDate = (str) => {
   const parsedData = jsonParse(str)
   if (isObject(parsedData)) {
     const keys = Object.keys(parsedData)
-    const stringifiedData = keys[0]
-    return jsonParse(stringifiedData)
+    if (keys.length === 1) {
+      const stringifiedData = keys[0]
+      return jsonParse(stringifiedData)
+    }
+    return parsedData
   }
   return str
 }
