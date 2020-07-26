@@ -14,12 +14,12 @@ class DiffView extends PureComponent {
         }
       },
       diffContainer: {
-        margin: 10
+        // margin: 10
         // borderTopRightRadius: 10,
         // borderTopLeftRadius: 10
       },
       titleBlock: {
-        fontSize: 22,
+        fontSize: 14,
         fontWeight: '600',
         textTransform: 'capitalize'
       },
@@ -48,7 +48,7 @@ class DiffView extends PureComponent {
         // width: '45%'
       },
       wordAdded: {
-        fontFamily: 'Poppins'
+        // fontFamily: 'Poppins'
         // width: '45%'
       },
       marker: {
@@ -60,8 +60,6 @@ class DiffView extends PureComponent {
     const { newJson, oldJson } = props
     const oldValue = JSON.stringify(newJson, null, 4)
     const newValue = JSON.stringify(oldJson, null, 4)
-    // const decodedoOldValue = JSON.stringify(decodeURIComponent(oldValue), null, 4)
-    // const decodedNewValue = JSON.stringify(decodeURIComponent(newValue), null, 4)
     return (
       <ReactDiffViewer
         leftTitle={props.title}

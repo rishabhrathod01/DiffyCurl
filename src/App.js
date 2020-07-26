@@ -5,13 +5,14 @@ import './App.css'
 import CurlInput from './Components/CurlInput/CurlInput'
 import JsonDiff from './Components/JsonDiff/JsonDiff'
 import Button from './Components/Button/Button'
+import { curl1, curl2 } from './mock/curls'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      curlFirst: '',
-      curlSecond: '',
+      curlFirst: curl1,
+      curlSecond: curl2,
       parsedFirstJson: {},
       parsedSecondJson: {},
       hideInput: false
@@ -99,7 +100,8 @@ class App extends Component {
             </div>
           </div>
         )}
-        <JsonDiff firstJson={state.parsedFirstJson} secondJson={state.parsedSecondJson} />
+        <JsonDiff key="root" level={0} firstJson={state.parsedFirstJson} secondJson={state.parsedSecondJson} />
+        <div style={{ marginTop: 100 }} />
       </div>
     )
   }
