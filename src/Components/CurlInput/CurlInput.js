@@ -1,4 +1,5 @@
 import React from 'react'
+import { FONTS } from '../../utils/constants'
 
 const CurlInput = ({ label = '', onChange, value = '' }) => {
   return (
@@ -13,7 +14,8 @@ const CurlInput = ({ label = '', onChange, value = '' }) => {
           border: '3px solid #adb5bd',
           padding: 20,
           borderRadius: 10,
-          fontFamily: 'Poppins'
+          fontFamily: FONTS.MONOSPACE,
+          fontSize: 12
         }}
         value={value}
         onChange={onChange}

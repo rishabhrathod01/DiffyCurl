@@ -100,7 +100,9 @@ class App extends Component {
             </div>
           </div>
         )}
-        <JsonDiff key="root" level={0} firstJson={state.parsedFirstJson} secondJson={state.parsedSecondJson} />
+        <div style={{ width: '90%', padding: '5%' }}>
+          <JsonDiff key="root" level={0} firstJson={state.parsedFirstJson} secondJson={state.parsedSecondJson} />
+        </div>
         <div style={{ marginTop: 100 }} />
       </div>
     )
