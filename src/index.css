@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap');
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+pre {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+}
+
+h1,
+button,
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+}
