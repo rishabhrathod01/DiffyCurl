@@ -1,0 +1,37 @@
+@import url('./fonts.css');
+@import url('./theme.css');
+@import url('./tailwind.css');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.codeMarker {
+  background-color: #fff3bf;
+  position: absolute ;
+  z-index: 20;
+}
+
+.insertCodeMarker {
+  background-color: #d3f9d8;
+  position: absolute ;
+  z-index: 20;
+}
+
+.deleteCodeMarker {
+  background-color: #ffe3e3;
+  position: absolute ;
+  z-index: 20;
+}
+
+::-webkit-scrollbar {
+  height: .25rem;
+  width: .4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #868e96;
+}
