@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d1cd4b8d6830d8c37db5b0619d2b787a",
+    "revision": "c525cc524f6c08ed2757051eb3ae524d",
     "url": "/DiffyCurl/index.html"
   },
   {
-    "revision": "a0b465119afc162813d7",
-    "url": "/DiffyCurl/static/css/main.9ef694e2.chunk.css"
+    "revision": "2ee0b4cb710e1b1acf96",
+    "url": "/DiffyCurl/static/css/main.9fefadbc.chunk.css"
   },
   {
-    "revision": "0a4ee3e54a8c1fd10c83",
-    "url": "/DiffyCurl/static/js/2.7cc6f69f.chunk.js"
+    "revision": "3dff63bdbb28300d0431",
+    "url": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js"
   },
   {
     "revision": "760ee10304c98b8aa79b8425ab74447b",
-    "url": "/DiffyCurl/static/js/2.7cc6f69f.chunk.js.LICENSE.txt"
+    "url": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a0b465119afc162813d7",
-    "url": "/DiffyCurl/static/js/main.0ee1761e.chunk.js"
+    "revision": "2ee0b4cb710e1b1acf96",
+    "url": "/DiffyCurl/static/js/main.5a07dc20.chunk.js"
   },
   {
     "revision": "dec05db7a525a87be64f",

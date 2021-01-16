@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/DiffyCurl/static/css/main.9ef694e2.chunk.css",
-    "main.js": "/DiffyCurl/static/js/main.0ee1761e.chunk.js",
-    "main.js.map": "/DiffyCurl/static/js/main.0ee1761e.chunk.js.map",
+    "main.css": "/DiffyCurl/static/css/main.9fefadbc.chunk.css",
+    "main.js": "/DiffyCurl/static/js/main.5a07dc20.chunk.js",
+    "main.js.map": "/DiffyCurl/static/js/main.5a07dc20.chunk.js.map",
     "runtime-main.js": "/DiffyCurl/static/js/runtime-main.336570af.js",
     "runtime-main.js.map": "/DiffyCurl/static/js/runtime-main.336570af.js.map",
-    "static/js/2.7cc6f69f.chunk.js": "/DiffyCurl/static/js/2.7cc6f69f.chunk.js",
-    "static/js/2.7cc6f69f.chunk.js.map": "/DiffyCurl/static/js/2.7cc6f69f.chunk.js.map",
+    "static/js/2.c4b99fd9.chunk.js": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js",
+    "static/js/2.c4b99fd9.chunk.js.map": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.map",
     "index.html": "/DiffyCurl/index.html",
-    "precache-manifest.68283a5bd632f776939f5a190244d048.js": "/DiffyCurl/precache-manifest.68283a5bd632f776939f5a190244d048.js",
+    "precache-manifest.6f33a4833468ecb296e88cf53d09fbbb.js": "/DiffyCurl/precache-manifest.6f33a4833468ecb296e88cf53d09fbbb.js",
     "service-worker.js": "/DiffyCurl/service-worker.js",
-    "static/css/main.9ef694e2.chunk.css.map": "/DiffyCurl/static/css/main.9ef694e2.chunk.css.map",
-    "static/js/2.7cc6f69f.chunk.js.LICENSE.txt": "/DiffyCurl/static/js/2.7cc6f69f.chunk.js.LICENSE.txt",
+    "static/css/main.9fefadbc.chunk.css.map": "/DiffyCurl/static/css/main.9fefadbc.chunk.css.map",
+    "static/js/2.c4b99fd9.chunk.js.LICENSE.txt": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.LICENSE.txt",
     "static/media/index.css": "/DiffyCurl/static/media/Poppins-SemiBold.83227cb4.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.336570af.js",
-    "static/js/2.7cc6f69f.chunk.js",
-    "static/css/main.9ef694e2.chunk.css",
-    "static/js/main.0ee1761e.chunk.js"
+    "static/js/2.c4b99fd9.chunk.js",
+    "static/css/main.9fefadbc.chunk.css",
+    "static/js/main.5a07dc20.chunk.js"
   ]
 }
