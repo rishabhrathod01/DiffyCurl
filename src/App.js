@@ -17,7 +17,7 @@ import { withTheme } from './hooks/useTheme'
 
 const EDITOR_THEMES = {
   TEXTMATE: 'textmate',
-  TWILIGHT: 'twilight'
+  DRACULA: 'dracula'
 }
 
 Object.values(EDITOR_THEMES).forEach((theme) => {
@@ -84,6 +84,7 @@ class App extends Component {
       diffEditorValue: ['', ''],
       sectionNameDiffMap: {}
     }
+    this.editorRef = React.createRef()
   }
 
   handleSubmit = () => {
@@ -190,24 +191,22 @@ class App extends Component {
       }
     }
 
-    this.setState({
-      parsedFirstJson,
-      parsedSecondJson,
-      showDifference: true,
-      diffEditorValue,
-      activeSection,
-      ...otherModState
-    })
+    this.setState(
+      {
+        parsedFirstJson,
+        parsedSecondJson,
+        showDifference: true,
+        diffEditorValue,
+        activeSection,
+        ...otherModState
+      },
+      () => {
+        try {
+          this.editorRef.current.scrollIntoView()
+        } catch (error) { }
+      }
+    )
   }
-
-  // clearValues = () => {
-  //   this.setState({
-  //     parsedFirstJson: {},
-  //     parsedSecondJson: {},
-  //     curlFirst: '',
-  //     curlSecond: ''
-  //   })
-  // }
 
   changeSection = (newActionSection) => {
     const { parsedFirstJson, parsedSecondJson } = this.state
@@ -229,7 +228,7 @@ class App extends Component {
     const { theme } = this.props
 
     return (
-      <div className="flex flex-col min-h-screen bg-white dark:bg-black-500">
+      <div className="flex flex-col min-h-screen bg-white dark:bg-black-700">
         <Header />
 
         <div className="mx-6 mt-28 z-0">
@@ -276,50 +275,56 @@ class App extends Component {
                 />
               </div>
             </div>
-            {showDifference && (
-              <div className="mt-10 px-4 ">
-                <div className="m-2">
-                  {Object.values(SECTIONS).map(({ label: sectionName }) => {
-                    const count = sectionNameDiffMap[sectionName] || 0
-                    return (
-                      <button
-                        key={sectionName}
-                        className={`capitalize text-base border-none rounded px-3 py-2 m-1 hover:font-semibold text-primary hover:text-primary-100 hover:text-gray-300
+            <div ref={this.editorRef}>
+              {showDifference && (
+                <div className="mt-10 px-4 ">
+                  <div className="m-2">
+                    {Object.values(SECTIONS).map(({ label: sectionName }) => {
+                      const count = sectionNameDiffMap[sectionName] || 0
+                      return (
+                        <button
+                          key={sectionName}
+                          className={`capitalize text-base border-none rounded px-3 py-2 m-1 hover:font-semibold text-primary hover:text-primary-100 hover:text-gray-300
                          ${activeSection === sectionName ? 'bg-primary-100 ' : ''}`}
-                        type="button"
-                        onClick={() => this.changeSection(sectionName)}
-                      >
-                        {sectionName}{' '}
-                        {count > 0 ? (
-                          <span className="font-normal font-mono text-sm text-yellow-800 dark:text-yellow-100">{` .${count} `}</span>
-                        ) : (
-                            ''
-                          )}
-                      </button>
-                    )
-                  })}
+                          type="button"
+                          onClick={() => this.changeSection(sectionName)}
+                        >
+                          {sectionName}{' '}
+                          {count > 0 ? (
+                            <span className="font-normal font-mono text-sm text-yellow-800 dark:text-yellow-100">{` • ${count} `}</span>
+                          ) : (
+                              ''
+                            )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                  <div className="px-4 py-4  rounded">
+                    <DiffEditor
+                      value={diffEditorValue}
+                      mode="json"
+                      // enableBasicAutocompletion
+                      // enableLiveAutocompletion
+                      highlightActiveLine
+                      showGutter
+                      showPrintMargin
+                      wrapEnabled
+                      readOnly
+                      width="100%"
+                      height="300px"
+                      theme={theme === 'dark' ? EDITOR_THEMES.DRACULA : EDITOR_THEMES.TEXTMATE}
+                      onChange={(value) => {
+                        this.setState({ diffEditorValue: value })
+                      }}
+                      setOptions={{
+                        fontFamily: 'FiraCode',
+                        fontSize: 12
+                      }}
+                    />
+                  </div>
                 </div>
-                <div className="px-4 py-4  rounded">
-                  <DiffEditor
-                    value={diffEditorValue}
-                    mode="json"
-                    // enableBasicAutocompletion
-                    // enableLiveAutocompletion
-                    highlightActiveLine
-                    showGutter
-                    showPrintMargin
-                    wrapEnabled
-                    readOnly
-                    width="100%"
-                    height="300px"
-                    theme={theme === 'dark' ? EDITOR_THEMES.TWILIGHT : EDITOR_THEMES.TEXTMATE}
-                    onChange={(value) => {
-                      this.setState({ diffEditorValue: value })
-                    }}
-                  />
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
         <div className="mb-16" />

@@ -27,17 +27,9 @@
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: "IBM Plex Mono";
-  src: url("../fonts/IBMPlexMono-Light.woff") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  src: url("../fonts/IBMPlexMono-Regular.woff") format("woff2");
+  font-family: "FiraCode";
+  src: url("../fonts/FiraCode-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }

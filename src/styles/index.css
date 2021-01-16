@@ -2,48 +2,47 @@
 @import url('./theme.css');
 @import url('./tailwind.css');
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   min-height: 100vh;
-
 }
+
 
 .codeMarker {
-  background-color: #fff3bf;
+  background-color: var(--color-orange-light);
   position: absolute ;
   z-index: 20;
 }
+
 
 .insertCodeMarker {
-  background-color: #d3f9d8;
+  background-color: var(--color-green-light);
   position: absolute ;
   z-index: 20;
 }
 
 .deleteCodeMarker {
-  background-color: #ffe3e3;
+  background-color: var(--color-red-light);
   position: absolute ;
   z-index: 20;
 }
-/* 
-.deleteCodeMarker {
-  background-color: #4d3d3d;
-}
-
-.insertCodeMarker{
-  background-color: #425544;
-} */
 
 ::-webkit-scrollbar {
   height: .25rem;
   width: .4rem;
+  
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #868e96;
+  border-radius: 8px;
 }
 
 input:focus {outline:none;}

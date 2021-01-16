@@ -8,15 +8,15 @@ module.exports = {
       colors: {
         black: {
           light: '#e9e9e9',
-          100: '#bcbcbd',
-          200: '#909092',
-          300: '#636466',
-          400: '#36373a',
-          500: '#202124',
-          600: '#1a1a1d',
-          700: '#131416',
-          800: '#0d0d0e',
-          900: '#060707'
+          100: '#D6D6D6',
+          200: '#ADADAD',
+          300: '#848484',
+          400: '#5B5B5B',
+          500: '#333333',
+          600: '#282828',
+          700: '#1E1E1E',
+          800: '#191919',
+          900: '#0A0A0A'
         },
         gray: {
           150: colors.coolGray[200]
@@ -38,14 +38,14 @@ module.exports = {
         gray800: theme('colors.gray.800'),
         black: {
           light: '#e9e9e9',
-          100: '#bcbcbd',
-          200: '#909092',
-          300: '#636466',
-          400: '#36373a',
-          500: '#202124',
-          600: '#1a1a1d',
-          700: '#131416',
-          800: '#0d0d0e',
+          100: '#CCCCCC',
+          200: '#B2B2B2',
+          300: '#999999',
+          400: '#7F7F7F',
+          500: '#666666',
+          600: '#4C4C4C',
+          700: '#333333',
+          800: '#191919',
           900: '#060707'
         }
       }),
@@ -56,27 +56,28 @@ module.exports = {
         gray800: theme('colors.gray.800'),
         black: {
           light: '#e9e9e9',
-          100: '#bcbcbd',
-          200: '#909092',
-          300: '#636466',
-          400: '#36373a',
-          500: '#202124',
-          600: '#1a1a1d',
-          700: '#131416',
-          800: '#0d0d0e',
+          100: '#CCCCCC',
+          200: '#B2B2B2',
+          300: '#999999',
+          400: '#7F7F7F',
+          500: '#666666',
+          600: '#4C4C4C',
+          700: '#333333',
+          800: '#191919',
           900: '#060707'
         }
       }),
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
-        mono: ['IBM Plex Mono', 'monospace']
+        mono: ['FiraCode', 'monospace']
       }
     }
   },
   variants: {
     extend: {
       fill: ['hover', 'focus', 'group-focus', 'group-hover'],
-      stroke: ['hover', 'focus', 'group-focus', 'group-hover']
+      stroke: ['hover', 'focus', 'group-focus', 'group-hover'],
+      backgroundOpacity: ['dark']
     }
   },
   plugins: []

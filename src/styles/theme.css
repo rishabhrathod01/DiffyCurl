@@ -2,7 +2,7 @@
 body[data-theme="dark"] {
 
   --bg-color: rgba(32, 33, 36, 1);
-  --bg-light-color: rgba(255, 255, 255, 0.04);
+  --bg-light-color: #202124;
   --bg-dark-color: rgba(0, 0, 0, 0.2);
   --fg-color: rgba(255, 255, 255, 0.9);
   --fg-light-color: rgba(255, 255, 255, 0.5);
@@ -17,6 +17,10 @@ body[data-theme="dark"] {
   --color-text-secondary: var(--gray-200);
   --color-text-accent: #81e6d9;
   background-color: var(--bg-color);
+
+  --color-green-light: #425544;
+  --color-red-light: #4d3d3d;
+  --color-orange-light: #58533d;
 }
 
 body[data-theme='light']{
@@ -36,4 +40,8 @@ body[data-theme='light']{
   --color-text-secondary: var(--gray-800);
   --color-text-accent: #2b6cb0;
   background-color: var(--bg-color);
+
+  --color-green-light: #d3f9d8;
+  --color-red-light: #ffe3e3;
+  --color-orange-light: #fff3bf;
 }
