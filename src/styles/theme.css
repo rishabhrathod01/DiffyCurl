@@ -9,7 +9,7 @@ body[data-theme="dark"] {
   --brd-color: rgba(255, 255, 255, 0.05);
   --err-color: rgba(255, 255, 255, 0.05);
   /* tooltip color */
-  --tt-color: rgba(48, 48, 48, 1); 
+  --tt-color: rgba(255, 255, 255, 1);
   /* active text color */
   --act-color: rgba(32, 33, 36, 1);
 
@@ -27,7 +27,9 @@ body[data-theme='light']{
   --fg-light-color: rgba(0, 0, 0, 0.6);
   --brd-color: rgba(0, 0, 0, 0.1);
   --err-color: rgba(0, 0, 0, 0.1);
-  --tt-color: rgba(255, 255, 255, 1);
+
+  --tt-color: rgba(48, 48, 48, 1); 
+
   --act-color: rgba(255, 255, 255, 1);
 
   --color-text-primary: var(--gray-900);

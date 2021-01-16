@@ -6,7 +6,9 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
   min-height: 100vh;
+
 }
 
 .codeMarker {
@@ -26,6 +28,14 @@ body {
   position: absolute ;
   z-index: 20;
 }
+/* 
+.deleteCodeMarker {
+  background-color: #4d3d3d;
+}
+
+.insertCodeMarker{
+  background-color: #425544;
+} */
 
 ::-webkit-scrollbar {
   height: .25rem;
@@ -35,3 +45,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #868e96;
 }
+
+input:focus {outline:none;}
+
+button:focus {outline:none;}

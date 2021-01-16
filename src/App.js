@@ -15,17 +15,6 @@ import 'ace-builds/src-noconflict/mode-json'
 import 'ace-builds/src-noconflict/snippets/json'
 import { withTheme } from './hooks/useTheme'
 
-// const themes = [
-//   // 'github', // light
-//   // 'tomorrow', // light
-//   // 'kuroir', // light
-//   // 'xcode', // light
-//   'textmate', // light
-//   // 'solarized_light', // light
-//   'twilight' // dark
-//   // 'monokai' // dark
-// ]
-
 const EDITOR_THEMES = {
   TEXTMATE: 'textmate',
   TWILIGHT: 'twilight'
@@ -107,7 +96,7 @@ class App extends Component {
     } catch (error) { }
 
     if (isEmpty(parsedFirstJson)) {
-      alert('Please enter valid Original cURL') // showSnackbar
+      alert('Please enter valid Original curl') // showSnackbar
       return
     }
 
@@ -116,7 +105,7 @@ class App extends Component {
     } catch (error) { }
 
     if (isEmpty(parsedSecondJson)) {
-      alert('Please enter valid Modified cURL') // showSnackbar
+      alert('Please enter valid Modified curl') // showSnackbar
       return
     }
 
@@ -168,7 +157,7 @@ class App extends Component {
       try {
         firstSection = JSON.parse(firstJsonString)
       } catch (error) {
-        console.log('not a JSON data')
+        // console.log('not a JSON data')
       }
 
       const secondJsonString = Object.entries(secondSection).reduce((previousValue, currentValueArray) => {
@@ -183,7 +172,7 @@ class App extends Component {
       try {
         secondSection = JSON.parse(secondJsonString)
       } catch (error) {
-        console.log('not a JSON data')
+        // console.log('not a JSON data')
       }
     }
     const sortedFirstSectionJson = reArrangeObj(firstSection)
@@ -211,14 +200,14 @@ class App extends Component {
     })
   }
 
-  clearValues = () => {
-    this.setState({
-      parsedFirstJson: {},
-      parsedSecondJson: {},
-      curlFirst: '',
-      curlSecond: ''
-    })
-  }
+  // clearValues = () => {
+  //   this.setState({
+  //     parsedFirstJson: {},
+  //     parsedSecondJson: {},
+  //     curlFirst: '',
+  //     curlSecond: ''
+  //   })
+  // }
 
   changeSection = (newActionSection) => {
     const { parsedFirstJson, parsedSecondJson } = this.state
@@ -235,10 +224,12 @@ class App extends Component {
       sectionNameDiffMap = {}
     } = this.state
 
+    const enteredBothCurls = curlFirst && curlSecond
+
     const { theme } = this.props
 
     return (
-      <div className="flex flex-col min-h-screen bg-white dark:bg-primary">
+      <div className="flex flex-col min-h-screen bg-white dark:bg-black-500">
         <Header />
 
         <div className="mx-6 mt-28 z-0">
@@ -246,7 +237,7 @@ class App extends Component {
             <div>
               <div className="flex flex-row">
                 <CurlInput
-                  label="Original cURL"
+                  label="Original curl"
                   value={curlFirst}
                   onChange={(e) => {
                     this.setState({
@@ -261,7 +252,7 @@ class App extends Component {
                 />
                 <div className="w-2 h-full" />
                 <CurlInput
-                  label="Modified cURL"
+                  label="Modified curl"
                   value={curlSecond}
                   onChange={(e) => {
                     this.setState({
@@ -276,7 +267,13 @@ class App extends Component {
                 />
               </div>
               <div className="flex flex-row items-center justify-center mt-4">
-                <Button label="COMPARE" onClick={this.handleSubmit} Icon={Send} />
+                <Button
+                  disable={!enteredBothCurls}
+                  label="COMPARE"
+                  toolTipText="Show comparison"
+                  onClick={this.handleSubmit}
+                  Icon={Send}
+                />
               </div>
             </div>
             {showDifference && (
@@ -325,7 +322,7 @@ class App extends Component {
             )}
           </div>
         </div>
-        <div className="mb-20" />
+        <div className="mb-16" />
       </div>
     )
   }

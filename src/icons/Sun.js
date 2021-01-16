@@ -3,7 +3,7 @@ import Proptypes from 'prop-types'
 
 const Sun = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 512 512">
-    <title>Sunny</title>
+   
     <path
       className={className}
       // stroke="currentColor"
