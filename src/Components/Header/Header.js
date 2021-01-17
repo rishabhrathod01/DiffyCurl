@@ -39,7 +39,7 @@ const Header = () => {
           <Tooltip toolTipText="Checkout code">
             <a
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               href="https://github.com/Rishabh-Rathod/DiffyCurl"
               className="group flex flex-row justify-center items-center px-2 py-1 bg-gray-150 hover:bg-gray-100  rounded"
             >
