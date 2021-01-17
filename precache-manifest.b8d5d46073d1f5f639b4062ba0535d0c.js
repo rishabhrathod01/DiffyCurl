@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "439e735845f379b3eca6b41172acf451",
+    "revision": "4070768057c1b5abb915c8feaf99a70f",
     "url": "/DiffyCurl/index.html"
   },
   {
-    "revision": "c63695f8cccbb529de90",
+    "revision": "bcab6081320ea79c4041",
     "url": "/DiffyCurl/static/css/main.eece4989.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c63695f8cccbb529de90",
-    "url": "/DiffyCurl/static/js/main.430ba92c.chunk.js"
+    "revision": "bcab6081320ea79c4041",
+    "url": "/DiffyCurl/static/js/main.62848675.chunk.js"
   },
   {
     "revision": "dec05db7a525a87be64f",
