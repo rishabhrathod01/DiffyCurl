@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/DiffyCurl/static/css/main.83ae223f.chunk.css",
-    "main.js": "/DiffyCurl/static/js/main.5cd7c717.chunk.js",
-    "main.js.map": "/DiffyCurl/static/js/main.5cd7c717.chunk.js.map",
+    "main.css": "/DiffyCurl/static/css/main.eece4989.chunk.css",
+    "main.js": "/DiffyCurl/static/js/main.2eb679d3.chunk.js",
+    "main.js.map": "/DiffyCurl/static/js/main.2eb679d3.chunk.js.map",
     "runtime-main.js": "/DiffyCurl/static/js/runtime-main.336570af.js",
     "runtime-main.js.map": "/DiffyCurl/static/js/runtime-main.336570af.js.map",
     "static/js/2.c4b99fd9.chunk.js": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js",
     "static/js/2.c4b99fd9.chunk.js.map": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.map",
     "index.html": "/DiffyCurl/index.html",
-    "precache-manifest.da31e2dab17fcd2416012d8b3faee7b2.js": "/DiffyCurl/precache-manifest.da31e2dab17fcd2416012d8b3faee7b2.js",
+    "precache-manifest.f442b02f04ad9ae6cef3f4f08bc4e1f1.js": "/DiffyCurl/precache-manifest.f442b02f04ad9ae6cef3f4f08bc4e1f1.js",
     "service-worker.js": "/DiffyCurl/service-worker.js",
-    "static/css/main.83ae223f.chunk.css.map": "/DiffyCurl/static/css/main.83ae223f.chunk.css.map",
+    "static/css/main.eece4989.chunk.css.map": "/DiffyCurl/static/css/main.eece4989.chunk.css.map",
     "static/js/2.c4b99fd9.chunk.js.LICENSE.txt": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.LICENSE.txt",
     "static/media/index.css": "/DiffyCurl/static/media/Poppins-SemiBold.83227cb4.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.336570af.js",
     "static/js/2.c4b99fd9.chunk.js",
-    "static/css/main.83ae223f.chunk.css",
-    "static/js/main.5cd7c717.chunk.js"
+    "static/css/main.eece4989.chunk.css",
+    "static/js/main.2eb679d3.chunk.js"
   ]
 }
