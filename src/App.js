@@ -213,6 +213,7 @@ class App extends Component {
     const { parsedFirstJson, parsedSecondJson } = this.state
     this.setEditorValue({ parsedFirstJson, parsedSecondJson, activeSection: newActionSection })
   }
+  
 
   render() {
     const {
@@ -224,8 +225,7 @@ class App extends Component {
       sectionNameDiffMap = {}
     } = this.state
 
-    const enteredBothCurls = curlFirst && curlSecond
-
+    const enteredBothCurls = !!(curlFirst && curlSecond)
     const { theme } = this.props
 
     return (
@@ -246,7 +246,9 @@ class App extends Component {
                   }}
                   onClear={() => {
                     this.setState({
-                      curlFirst: ''
+                      curlFirst: '',
+                      parsedFirstJson: {},
+                      showDifference: false
                     })
                   }}
                 />
@@ -261,7 +263,9 @@ class App extends Component {
                   }}
                   onClear={() => {
                     this.setState({
-                      curlSecond: ''
+                      curlSecond: '',
+                      parsedSecondJson: {},
+                      showDifference: false
                     })
                   }}
                 />
@@ -277,7 +281,7 @@ class App extends Component {
               </div>
             </div>
             <div ref={this.editorRef}>
-              {showDifference && (
+              {!!(enteredBothCurls && showDifference) && (
                 <div className="mt-10 px-4 ">
                   <div className="m-2">
                     {Object.values(SECTIONS).map(({ label: sectionName }) => {
