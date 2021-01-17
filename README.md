@@ -8,11 +8,9 @@ It was too difficult to compare curls manually in either browser dev tools or us
 
 ## Snapshots
 
-
 #### Light theme
 
 ![Light Theme](https://raw.githubusercontent.com/Rishabh-Rathod/DiffyCurl/master/src/snaps/screely-light.png)
-
 
 #### Dark theme
 
@@ -38,4 +36,4 @@ Checkout [upcoming features List](https://www.notion.so/DiffyCURL-f67b38ce2a7c42
 
 
 
-<img alt="" src="https://rishabh-rathod.herokuapp.com/readme/github?id=github_readme" />
+<img alt="" src="https://rishabh-rathod.herokuapp.com/readme/github?id=diffycurl" />
