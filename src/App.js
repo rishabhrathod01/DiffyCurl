@@ -140,35 +140,36 @@ class App extends Component {
     this.setEditorValue({ parsedFirstJson, parsedSecondJson, activeSection, sectionNameDiffMap })
   }
 
+  parseJsonModifiedData = ({ section }) => {
+    let jsonString = ''
+    const entries = Object.entries(section)
+    if (entries.length) {
+      jsonString = entries.reduce((previousValue, currentValueArray) => {
+        const [currentKey, currentValue] = currentValueArray
+        if (Array.isArray(previousValue)) {
+          const [key, value] = previousValue
+          return `${key}=${value}&${currentKey}=${currentValue}`
+        }
+        return previousValue + currentKey + currentValue
+      })
+    }
+    return jsonString
+  }
+
   setEditorValue = ({ parsedFirstJson, parsedSecondJson, activeSection, sectionNameDiffMap }) => {
     const filterFirstJson = filterRequestSections(parsedFirstJson)
     const filterSecondJson = filterRequestSections(parsedSecondJson)
     let firstSection = filterFirstJson[activeSection] || {}
     let secondSection = filterSecondJson[activeSection] || {}
     if (activeSection === 'body') {
-      const firstJsonString = Object.entries(firstSection).reduce((previousValue, currentValueArray) => {
-        const [currentKey, currentValue] = currentValueArray
-        if (Array.isArray(previousValue)) {
-          const [key, value] = previousValue
-          return key + value + currentKey + currentValue
-        }
-        return previousValue + currentKey + currentValue
-      })
+      const firstJsonString = this.parseJsonModifiedData({ section: firstSection })
+      const secondJsonString = this.parseJsonModifiedData({ section: secondSection })
 
       try {
         firstSection = JSON.parse(firstJsonString)
       } catch (error) {
         // console.log('not a JSON data')
       }
-
-      const secondJsonString = Object.entries(secondSection).reduce((previousValue, currentValueArray) => {
-        const [currentKey, currentValue] = currentValueArray
-        if (Array.isArray(previousValue)) {
-          const [key, value] = previousValue
-          return key + value + currentKey + currentValue
-        }
-        return previousValue + currentKey + currentValue
-      })
 
       try {
         secondSection = JSON.parse(secondJsonString)
