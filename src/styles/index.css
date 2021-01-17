@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   min-height: 100vh;
+  
 }
 
 
@@ -48,3 +49,22 @@ body {
 input:focus {outline:none;}
 
 button:focus {outline:none;}
+
+.ace-dracula .ace_gutter {
+  background: var(--ace-gutter);
+}
+.ace-dracula .ace_variable {
+  color: var(--ace-variable);
+}
+
+.ace-dracula .ace_string {
+  color: var(--ace-string);
+}
+
+.ace-dracula .ace_constant .ace_numeric {
+  color: var(--ace-string);
+}
+
+.ace_gutter{
+  transition: background 0.1s ease-in-out;
+}

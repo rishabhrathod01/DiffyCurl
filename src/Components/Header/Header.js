@@ -16,7 +16,7 @@ const Header = () => {
       )
 
   return (
-    <div className="fixed w-full top-0 flex justify-between items-center mb-10 h-16 px-14 shadow z-10 bg-white dark:bg-black-800 ">
+    <div className="fixed w-full top-0 flex justify-between items-center mb-10 h-16 px-14 shadow z-10 bg-white dark:bg-black-800 transition-colors">
       <div className="py-6">
         <h1 className="text-3xl text-primary">
           Diffy<span className="font-semibold m-0 p-0">CURL</span>

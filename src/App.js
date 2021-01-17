@@ -228,7 +228,7 @@ class App extends Component {
     const { theme } = this.props
 
     return (
-      <div className="flex flex-col min-h-screen bg-white dark:bg-black-700">
+      <div className="flex flex-col min-h-screen bg-white dark:bg-black-700 transition-colors">
         <Header />
 
         <div className="mx-6 mt-28 z-0">
@@ -284,14 +284,14 @@ class App extends Component {
                       return (
                         <button
                           key={sectionName}
-                          className={`capitalize text-base border-none rounded px-3 py-2 m-1 hover:font-semibold text-primary hover:text-primary-100 hover:text-gray-300
-                         ${activeSection === sectionName ? 'bg-primary-100 ' : ''}`}
+                          className={` transition-colors capitalize text-base border-none rounded px-3 py-2 m-1 hover:font-semibold text-primary hover:text-primary-100 hover:text-gray-300
+                         ${activeSection === sectionName ? 'bg-primary-100 dark:bg-black-500 ' : ''}`}
                           type="button"
                           onClick={() => this.changeSection(sectionName)}
                         >
-                          {sectionName}{' '}
+                          {sectionName}
                           {count > 0 ? (
-                            <span className="font-normal font-mono text-sm text-yellow-800 dark:text-yellow-100">{` • ${count} `}</span>
+                            <span className="ml-1 font-normal font-mono text-sm text-yellow-800 dark:text-yellow-100">{` • ${count} `}</span>
                           ) : (
                               ''
                             )}
@@ -312,13 +312,13 @@ class App extends Component {
                       readOnly
                       width="100%"
                       height="300px"
-                      theme={theme === 'dark' ? EDITOR_THEMES.DRACULA : EDITOR_THEMES.TEXTMATE}
+                      theme={theme === 'dark' ? 'dracula' : EDITOR_THEMES.TEXTMATE}
                       onChange={(value) => {
                         this.setState({ diffEditorValue: value })
                       }}
                       setOptions={{
                         fontFamily: 'FiraCode',
-                        fontSize: 12
+                        fontSize: 13
                       }}
                     />
                   </div>

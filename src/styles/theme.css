@@ -16,11 +16,15 @@ body[data-theme="dark"] {
   --color-text-primary: var(--gray-100);
   --color-text-secondary: var(--gray-200);
   --color-text-accent: #81e6d9;
-  background-color: var(--bg-color);
+  
 
   --color-green-light: #425544;
   --color-red-light: #4d3d3d;
   --color-orange-light: #58533d;
+  
+  --ace-gutter: #53555e;
+  --ace-variable: rgb(95,244,251,1);
+  --ace-string: rgb(10,208,18,1);
 }
 
 body[data-theme='light']{
@@ -39,9 +43,11 @@ body[data-theme='light']{
   --color-text-primary: var(--gray-900);
   --color-text-secondary: var(--gray-800);
   --color-text-accent: #2b6cb0;
-  background-color: var(--bg-color);
+  
 
   --color-green-light: #d3f9d8;
   --color-red-light: #ffe3e3;
   --color-orange-light: #fff3bf;
+  
+ 
 }

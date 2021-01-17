@@ -13,7 +13,7 @@ export default function Button({ onClick, label, Icon, toolTipText = '', disable
         onClick={onClick}
       >
         <span className="font-bold text-white text-xl">{label}</span>
-        <Icon className="ml-2 w-6 h-5 fill-white" />
+        {Icon && <Icon className="ml-2 w-6 h-5 fill-white" />}
       </button>
     </Tooltip>
   )
