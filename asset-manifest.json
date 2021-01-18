@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/DiffyCurl/static/css/main.eece4989.chunk.css",
-    "main.js": "/DiffyCurl/static/js/main.62848675.chunk.js",
-    "main.js.map": "/DiffyCurl/static/js/main.62848675.chunk.js.map",
+    "main.js": "/DiffyCurl/static/js/main.b01de921.chunk.js",
+    "main.js.map": "/DiffyCurl/static/js/main.b01de921.chunk.js.map",
     "runtime-main.js": "/DiffyCurl/static/js/runtime-main.336570af.js",
     "runtime-main.js.map": "/DiffyCurl/static/js/runtime-main.336570af.js.map",
     "static/js/2.c4b99fd9.chunk.js": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js",
     "static/js/2.c4b99fd9.chunk.js.map": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.map",
     "index.html": "/DiffyCurl/index.html",
-    "precache-manifest.b8d5d46073d1f5f639b4062ba0535d0c.js": "/DiffyCurl/precache-manifest.b8d5d46073d1f5f639b4062ba0535d0c.js",
+    "precache-manifest.2145a7e1efdae38345174a6c372c4ad3.js": "/DiffyCurl/precache-manifest.2145a7e1efdae38345174a6c372c4ad3.js",
     "service-worker.js": "/DiffyCurl/service-worker.js",
     "static/css/main.eece4989.chunk.css.map": "/DiffyCurl/static/css/main.eece4989.chunk.css.map",
     "static/js/2.c4b99fd9.chunk.js.LICENSE.txt": "/DiffyCurl/static/js/2.c4b99fd9.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.336570af.js",
     "static/js/2.c4b99fd9.chunk.js",
     "static/css/main.eece4989.chunk.css",
-    "static/js/main.62848675.chunk.js"
+    "static/js/main.b01de921.chunk.js"
   ]
 }
