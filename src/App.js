@@ -141,9 +141,24 @@ class App extends Component {
   }
 
   parseJsonModifiedData = ({ section }) => {
+    // this is temporary fix for parsing json data from string
     let jsonString = ''
     const entries = Object.entries(section)
-    if (entries.length) {
+    let isJsonData = false
+    if (entries.length === 1) {
+      // normal json data
+      try {
+        const [key] = entries[0]
+        JSON.parse(key)
+        jsonString = key
+        isJsonData = true
+      } catch (error) {
+        isJsonData = false
+      }
+    }
+
+    if (!isJsonData && entries.length) {
+      // for json data having url with queries
       jsonString = entries.reduce((previousValue, currentValueArray) => {
         const [currentKey, currentValue] = currentValueArray
         if (Array.isArray(previousValue)) {
@@ -213,7 +228,6 @@ class App extends Component {
     const { parsedFirstJson, parsedSecondJson } = this.state
     this.setEditorValue({ parsedFirstJson, parsedSecondJson, activeSection: newActionSection })
   }
-  
 
   render() {
     const {
